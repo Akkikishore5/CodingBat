@@ -1,0 +1,20 @@
+import java.util.Scanner;
+import java.lang.Math;
+import java.lang.System;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("What is your number?");
+    int n = scan.nextInt();
+    System.out.println("Here is mine: " + diff21(n));
+    scan.close();
+  }
+  public static int diff21(int n) {
+    if (n <= 21){
+      return 21 - n;
+    }
+    else
+      return 2*Math.abs(21 - n);
+}
+}
