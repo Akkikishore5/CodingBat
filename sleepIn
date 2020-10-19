@@ -1,0 +1,36 @@
+import java.util.Scanner;
+import java.lang.System;
+import java.lang.String;
+
+public class Main{
+
+     public static void main(String []args){
+        boolean weekday = true;
+        boolean vacation = false;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("What day is it?");
+        String day = scan.nextLine();
+        if(day.equals("sunday") | day.equals("saturday")){
+            weekday = false;
+        }
+        System.out.println("Are you on vacation?");  
+        String yn = scan.nextLine();
+        if(yn.equals("yes")){
+            vacation = true;
+        } 
+        if(sleepIn(weekday, vacation) == false){
+           System.out.println("You may not sleep in!");  
+        }
+        else
+           System.out.println("Enjoy your rest!");
+        scan.close();
+     }
+     
+     public static boolean sleepIn(boolean weekday, boolean vacation) {
+        if (weekday == false || vacation == true) {
+            return true;
+         }
+        else
+            return false;
+}
+}
